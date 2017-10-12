@@ -19,7 +19,6 @@ module.exports = {
       { name: 'format-detection', content: 'email=no' }
     ],
     link: [
-      { rel: 'stylesheet', href: '//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
       { rel: 'icon', type: 'image/x-icon', href: '//o4a7cbihz.qnssl.com/cover/4a45adda-d3e7-4726-bdd5-8e03b9485b52' }
     ],
     script: [
