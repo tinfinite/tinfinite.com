@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "axios": "^0.16.1",
+    "fe-utils": "^1.1.4",
     "nuxt": "^1.0.0-rc11",
     "vue-awesome-swiper": "^2.5.4",
     "weixin-js-sdk": "^1.2.0"
