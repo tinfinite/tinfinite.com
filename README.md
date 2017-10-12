@@ -1,22 +1,22 @@
-# zhibo-h5-ssr
+# tinfinite 官网
 
-> zhibo h5 ssr
+使用[Nuxt.js](https://github.com/nuxt/nuxt.js)构建
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-$ npm install # Or yarn install
+# 安装 npm 依赖
+$ npm install
 
-# serve with hot reload at localhost:3000
+# 本地开发调试，默认启动 => localhost:3000
 $ npm run dev
 
-# build for production and launch server
-$ npm run build
-$ npm start
+# 模拟服务器真实环境，test => 测试 && stage => 预发
+$ npm run test
+$ npm run stage
 
-# generate static project
+# 打包静态文件
 $ npm run generate
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+
