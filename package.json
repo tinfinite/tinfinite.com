@@ -1,27 +1,38 @@
 {
   "name": "tinfinite.com",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "tinfinite.com",
+  "author": "tinfiniteFE",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "BUILD_ENV=test nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "test": "BUILD_ENV=test nuxt build && node build && HOST=0.0.0.0 PORT=$PORT nuxt start",
+    "stage": "BUILD_ENV=stage nuxt build && node build && PORT=$PORT nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tinfinite/tinfinite.com.git"
+  "dependencies": {
+    "axios": "^0.16.1",
+    "fe-utils": "^1.1.4",
+    "mint-ui": "^2.2.9",
+    "nuxt": "^1.0.0-rc11",
+    "vue-awesome-swiper": "^2.5.4",
+    "weixin-js-sdk": "^1.2.0"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tinfinite/tinfinite.com/issues"
-  },
-  "homepage": "https://github.com/tinfinite/tinfinite.com#readme",
   "devDependencies": {
-    "cz-conventional-changelog": "^1.1.6"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "asyncawait": "^1.0.6",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.3",
+    "qiniu": "^6.0.5"
   }
 }

@@ -1,0 +1,528 @@
+@import './commons/base';
+
+.border-1px-radius(@a) {
+  -webkit-border-radius: unit(@a, px);
+  -moz-border-radius: unit(@a, px);
+  -ms-border-radius: unit(@a, px);
+  -o-border-radius: unit(@a, px);
+  border-radius: unit(@a, px);
+  &:after {
+  -webkit-border-radius: unit(@a, px);
+  -moz-border-radius: unit(@a, px);
+  -ms-border-radius: unit(@a, px);
+  -o-border-radius: unit(@a, px);
+  border-radius: unit(@a, px);
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+    &:after {
+      right: -100%;
+      bottom: -100%;
+      -webkit-transform: scale(0.5);
+    }
+  }
+}
+.box-shadow(@color) {
+  box-shadow: rgba(200, 200, 200, @color) 0px 2px 10px;
+}
+
+.tinfinite-body {
+  width: 100%;
+  height: 100%;
+  background: #F9FAFF;
+}
+
+.tinfinite-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  .box-shadow(.12);
+  // overflow: hidden;
+}
+  .tinfinite-header-main {
+    margin: 0 auto;
+    line-height: 70px;
+    overflow: hidden;
+  }
+  .tinfinite-header-nav {
+    padding-left: 50px;
+    overflow: hidden;
+
+    li {
+      cursor: pointer;
+      float: left;
+      height: 70px;
+      a {
+        display: block;
+        padding:0 20px;
+      }
+      &.active {
+        border-bottom: 3px solid #0145FF;
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: #F9FAFC;
+      }
+    }
+  }
+  .tinfinite-header-menu {
+    display: none;
+    background-color: rgba(0,0,6,.9);
+    position: absolute;
+    top: 70px;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+
+    li {
+      line-height: 50px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      a {
+        display: block;
+        width: 100%;
+        padding: 0 30px;
+        color: #fff;
+      }
+      &.active {
+        a:after {
+          font: normal normal normal 20px FontAwesome;
+          content: '\f00c';
+          padding: 15px 25px;
+          color: #0145FF;
+          float: right;
+        }
+      }
+    }
+  }
+  .tinfinite-header-button {
+    display: none;
+    &:after {
+      font: normal normal normal 20px FontAwesome;
+      content: '\f0c9';
+      padding: 25px 10px 25px 40px;
+      float: right;
+    }
+    &.close:after {
+      content: '\f00d';
+    }
+  }
+  .tinfinite-logo {
+    float: left;
+    margin-top: 19px;
+    background-image: url(https://o4a7cbihz.qnssl.com/cover/c2c98281-965a-4846-a75e-83fc0909d5ff);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    a {
+      display: block;
+      width: 108px;
+      height: 36px;
+    }
+  }
+
+.tinfinite-main {
+  width: 100%;
+  padding-top: 70px;
+}
+  .tinfinite-title {
+    margin:0 auto 20px;
+
+    span.title {
+      width: 50%;
+      padding-left: 10px;
+      border-left: 3px solid #317FE9;
+    }
+    span.link {
+      width: 50%;
+      color: #666;
+      float: right;
+      text-align: right;
+    }
+  }
+  .tinfinite-banner {
+    width: 100%;
+    margin: 30px auto;
+    overflow: hidden;
+    .border-1px-radius(6);
+
+    img {
+      width: 100%;
+      height: 350px;
+    }
+  }
+  .tinfinite-ranking {
+    position: relative;
+    margin: 0 auto;
+
+    .tinfinite-ranking-menu {
+      display: none;
+      background-color: rgba(0,0,6,.9);
+      position: absolute;
+      top: 95px;
+      right: 35px;
+      z-index: 2;
+      width: 200px;
+      .border-1px-radius(10);
+
+      li {
+        display: block;
+        width: 100%;
+        padding: 10px 25px 10px 15px;
+        color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.active:after {
+          font: normal normal normal 16px FontAwesome;
+          content: '\f00c';
+          color: #0145FF;
+          position: absolute;
+          right: 10px;
+          top: 10px;
+        }
+      }
+    }
+    .ranking {
+      width: 32%;
+      float: left;
+      margin-left: 2%;
+      padding-bottom: 20px;
+      background-color: #fff;
+      .box-shadow(.12);
+      .border-1px-radius(5);
+
+      &.first {
+        margin-left: 0px
+      }
+
+      .ranking-title {
+        padding: 0 40px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 30px 0;
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+
+        .fa-angle-down {
+          position: absolute;
+          top: -20px;
+          right: 0;
+          padding: 20px;
+          font-size: 24px;
+          float: right;
+          display: none;
+        }
+      }
+
+      .ranking-item {
+        padding: 8px 15px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        clear: both;
+
+        &:hover {
+          background: #F9F9FB;
+        }
+
+        .item-icon {
+          float: left;
+          width: 18px;
+          height: 18px;
+          margin-top: 5px;
+          margin-right: 5px;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+        .item-icon0 {
+          background-image: url('//o4a7cbihz.qnssl.com/cover/7bffe0a0-5bc6-45d3-9ef5-2753b97b4a6b');
+        }
+        .item-icon1 {
+          background-image: url('//o4a7cbihz.qnssl.com/cover/071c9cc0-4ec5-4437-854c-914ad3bb0c05');
+        }
+        .item-icon2 {
+          background-image: url('//o4a7cbihz.qnssl.com/cover/5b6daca6-4057-4114-bcf1-1b5fba042d10');
+        }
+
+        .item-img {
+          float: left;
+          margin-right: 10px;
+          img {
+            width: 68px;
+            height: 68px;
+            .border-1px-radius(15);
+          }
+        }
+        .item-title {
+          font-size: 12px;
+          span {
+            display: block;
+            color: #999;
+          }
+        }
+      }
+    }
+    .rank-link {
+      display: none;
+      text-align: center;
+      a {
+        display: block;
+        padding:20px;
+        width: 100%;
+      }
+    }
+  }
+  .tinfinite-contact {
+    margin: 30px auto 60px;
+    overflow: hidden;
+    padding-bottom: 2px;
+
+    .tinfinite-contact-qrCode {
+      display: none;
+      padding: 10%;
+      img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+      }
+      .text {
+        // padding: 39% 0;
+        margin-top: -50px;
+        position: relative;
+        top: 50%;
+        font-size: 12px;
+      }
+      .qrCodeHtml {
+        font-size: 12px;
+        margin-top: 0;
+        position: relative;
+        top: 0;
+      }
+      &.active {
+        display: block;
+        -webkit-animation: rotateplane .5s ease-in-out;
+        animation: rotateplane .5s ease-in-out;
+      }
+    }
+
+    .tinfinite-contact-icon {
+      display: none;
+      padding: 36.33% 10%;
+      img {
+        width: 35%;
+        display: block;
+        margin: 0 auto 10%;
+      }
+      &.active {
+        display: block;
+        -webkit-animation: rotateplane .5s ease-in-out;
+        animation: rotateplane .5s ease-in-out;
+      }
+    }
+    ul {
+      li {
+        word-break:break-all;
+        display: inline-table;
+        vertical-align:middle;
+        background: #fff;
+        text-align: center;
+        .box-shadow(.12);
+        .border-1px-radius(5);
+      }
+    }
+  }
+
+.tinfinite-footer {
+  height: 70px;
+  background: #0145FF;
+
+  .tinfinite-footer-main{
+    margin: 0 auto;
+    line-height: 70px;
+    text-align: right;
+    span {
+      float: left;
+      color: #fff;
+      a {
+        color:#fff;
+        padding-left:20px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    img {
+      width: 34px;
+      height: 34px;
+      margin-left: 20px;
+    }
+  }
+}
+
+.tinfinite-weChart {
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -140px;
+    margin-top: -140px;
+    width: 280px;
+  }
+
+}
+
+@keyframes rotateplane {
+  0% {
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+  }
+  50% {
+    transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+  }
+  100% {
+    transform: rotateY(-0deg);
+    -webkit-transform: rotateY(-0deg);
+  }
+
+}
+
+@media (max-width: 720px) {
+  .tinfinite-header-nav {
+    display: none
+  }
+  .tinfinite-header-menu {
+    display: block;
+  }
+  .tinfinite-header-button {
+    display: block;
+  }
+  .tinfinite-banner {
+    .border-1px-radius(0);
+    min-width: 320px;
+    margin-top: 0;
+
+    img {
+      width: 100%;
+      height: 200px;
+    }
+  }
+  .tinfinite-ranking {
+    .tinfinite-title{
+      span.link{
+        display: none
+      }
+    }
+    .rank-link {
+      display: block;
+    }
+    .tinfinite-ranking-menu {
+      display: inherit;
+    }
+    .ranking {
+      width: 94%;
+      margin-left: 3%;
+      display: none;
+
+      &.show{
+        margin-left: 3%;
+        display: block;
+      }
+
+      .ranking-title {
+        .fa-angle-down{
+          display: block
+        }
+      }
+    }
+  }
+  .tinfinite-contact {
+    margin: 30px auto;
+
+    ul {
+      li {
+        width: 45.5%;
+        margin: 0 0 20px 3%;
+
+        &:first-child {
+          margin-left: 3%
+        }
+      }
+    }
+  }
+  .tinfinite-footer {
+    .tinfinite-footer-main {
+      img {
+        width: 26px;
+        height: 26px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+@media (min-width: 720px) {
+  .tinfinite-contact {
+    ul {
+      li {
+        width: 23%;
+        margin: 0 0 0 2.5%;
+
+        &:first-child {
+          margin-left: 0
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .tinfinite-title {
+    margin: 0 3% 20px;
+  }
+
+  .tinfinite-header-main {
+    padding: 0 10px;
+  }
+  .tinfinite-footer-main {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 1000px) {
+  .tinfinite-main{
+    width: 1000px;
+    margin: 0 auto;
+  }
+  .tinfinite-header-main {
+    width: 1100px;
+  }
+  .tinfinite-footer-main {
+    width: 1000px;
+  }
+  .tinfinite-contact {
+    ul {
+      li {
+        width: 23%;
+        margin: 0 0 0 2.5%;
+
+        &:first-child {
+          margin-left: 0
+        }
+      }
+    }
+  }
+}
+
+

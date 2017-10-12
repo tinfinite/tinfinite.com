@@ -1,3 +1,15 @@
-.DS_Store
-node_modules/
+# dependencies
+node_modules
+
+# logs
 npm-debug.log
+
+# Nuxt build
+.nuxt
+
+.vscode
+
+# Nuxt generate
+dist
+
+.DS_Store
