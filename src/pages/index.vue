@@ -6,7 +6,7 @@
 <div class="tinfinite-body">
   <div class="tinfinite-header">
     <div class="tinfinite-header-main">
-      <div class="tinfinite-logo"><a href="/"> </a></div>
+      <div class="tinfinite-logo"><a href="/"></a></div>
       <div class="tinfinite-header-button" :class="showMenu ? 'close' : ''" @click="showMenu = !showMenu"></div>
       <ul class="tinfinite-header-nav">
         <li v-for="(item, i) of menuArr" :class="{active: showMenuIndex === i}" @click="showMenuIndex = i"><a :href="item.href" :target="i === 3 ? '_blank' : ''">{{item.title}}</a></li>
@@ -68,8 +68,8 @@
   <div class="tinfinite-footer">
     <div class="tinfinite-footer-main">
       <span>© 情非得已（北京）科技有限公司 <a href="https://www.lagou.com/gongsi/j116183.html" target="_blank">加入我们</a></span>
-      <a href="javascript:;" @click="showWeChart = !showWeChart"><img src="//o4a7cbihz.qnssl.com/cover/27f1307a-57ec-47e5-9b02-7685ee6fd1e6" alt="一块听听微信"></a>
-      <a href="//weibo.com/u/6034607459" target="_blank"><img src="//o4a7cbihz.qnssl.com/cover/2628968f-c8e7-429f-9671-1a5a63331836" alt="一块听听微博"></a>
+      <a href="javascript:;" @click="showWeChart = !showWeChart"><img src="//ofe0v4nhm.qnssl.com/live/icon/weixin-icon.png" alt="一块听听微信"></a>
+      <a href="//weibo.com/u/6034607459" target="_blank"><img src="//ofe0v4nhm.qnssl.com/live/icon/weibo-icon.png" alt="一块听听微博"></a>
     </div>
   </div>
   <div class="tinfinite-weChart" v-show="showWeChart" @click="showWeChart = !showWeChart"><img src="//o4a7cbihz.qnssl.com/cover/71f30b41-7fca-4124-87f1-549bfc730709" alt="商务合作"></div>
@@ -123,15 +123,15 @@
         ],
         contacts: [{
           html: '<h4>商务合作</h4><br>请发送邮件至<br>business@tinfinite.com',
-          icon: '//o4a7cbihz.qnssl.com/cover/a3eec296-6235-4da2-8c38-746407cd8d2f',
+          icon: '//ofe0v4nhm.qnssl.com/live/icon/concat.png',
           title: '商务合作'
         }, {
-          qrCode: '//o4a7cbihz.qnssl.com/cover/f30104af-a679-48da-9513-a700658561e5',
+          qrCode: '//ofe0v4nhm.qnssl.com/live/icon/tingting-qrcode.jpg',
           html: '微信扫一扫<br>添加好友洽谈',
           icon: '//o3pvuu23u.qnssl.com/ssr/index/img/2.png',
           title: '商户咨询'
         }, {
-          qrCode: '//o4a7cbihz.qnssl.com/cover/7f42fc58-3525-4bcf-897c-25b2e5872347',
+          qrCode: '//ofe0v4nhm.qnssl.com/live/icon/tingting-qrcode.jpg',
           html: '微信扫一扫<br>添加好友反馈',
           icon: '//o3pvuu23u.qnssl.com/ssr/index/img/3.png',
           title: '联系客服'

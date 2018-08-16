@@ -158,8 +158,8 @@ export default Request
 function getBaseUri () {
   const area = process.env.NODE_SP === 'huabei2' ? 'huabei2-' : ''
   const env = process.env.BUILD_ENV === 'test' ? '-dev' : process.env.BUILD_ENV === 'stage' ? '-stg' : ''
-
-  return `https://${area}live${env}.tinfinite.com/api/`
+  console.log(area, env)
+  return `http://${area}live${env}.tinfinite.com/api/`
 }
 
 function str2json (str) {

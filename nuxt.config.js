@@ -19,7 +19,7 @@ module.exports = {
       { name: 'format-detection', content: 'email=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '//o4a7cbihz.qnssl.com/cover/4a45adda-d3e7-4726-bdd5-8e03b9485b52' }
+      { rel: 'icon', type: 'image/x-icon', href: '//ofe0v4nhm.qnssl.com/live/icon/tinfinite-fav.png' }
     ],
     script: [
       { src: '//o3pvuu23u.qnssl.com/ssr/js/ssr-index-baidu-hm.js' }
