@@ -72,7 +72,7 @@
       <a href="//weibo.com/u/6034607459" target="_blank"><img src="//ofe0v4nhm.qnssl.com/live/icon/weibo-icon.png" alt="一块听听微博"></a>
     </div>
   </div>
-  <div class="tinfinite-weChart" v-show="showWeChart" @click="showWeChart = !showWeChart"><img src="//o4a7cbihz.qnssl.com/cover/71f30b41-7fca-4124-87f1-549bfc730709" alt="商务合作"></div>
+  <div class="tinfinite-weChart" v-show="showWeChart" @click="showWeChart = !showWeChart"><img src="//ofe0v4nhm.qnssl.com/live/icon/tingting-qrcode.jpg" alt="商务合作"></div>
 </div>
 </template>
 

@@ -5,7 +5,7 @@
   "author": "tinfiniteFE",
   "private": true,
   "scripts": {
-    "dev": "BUILD_ENV=stg nuxt",
+    "dev": "BUILD_ENV=test nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "test": "BUILD_ENV=test nuxt build && node build && HOST=0.0.0.0 PORT=$PORT nuxt start",
