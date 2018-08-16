@@ -2,6 +2,11 @@
 
 使用[Nuxt.js](https://github.com/nuxt/nuxt.js)构建
 
+测试调试域名：
+http://ssr-index-dev.tinfinite.com/
+线上域名：
+http://tinfinite.com/
+
 ## Build Setup
 
 ``` bash
