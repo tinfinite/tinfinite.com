@@ -1,0 +1,28 @@
+
+.page1-bg {
+  background: #FFD020;
+}
+
+.page2-bg {
+  background: #ffffff;
+}
+
+.page3-bg {
+  background: #fafafa;
+}
+
+.padding-bottom {
+  padding-bottom: 0 !important;
+}
+
+.logo-size {
+  width: 371px !important;
+}
+
+.ting-center {
+  text-align: center;
+  margin-top: 150px;
+}
+.imgw {
+  width: 1170px;
+}
